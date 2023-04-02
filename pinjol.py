@@ -1,5 +1,9 @@
 import streamlit as st
 
+st.title('Kalkulator Pinjol')
+st.set_theme('light')
+st.markdown("Ini adalah aplikasi sederhana untuk menghitung jumlah pinjaman yang dapat Anda ambil.")
+
 def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     """
     Fungsi ini bertujuan untuk menghitung total uang yang dapat dipinjam,
@@ -57,9 +61,6 @@ def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     pinjaman = gaji_bulanan * durasi_pinjaman * tingkat_bunga
     return pinjaman
 
-st.title('Kalkulator Pinjol')
-st.set_theme('light')
-st.markdown("Ini adalah aplikasi sederhana untuk menghitung jumlah pinjaman yang dapat Anda ambil.")
 
 with st.form('input_form'):
     st.write('Silahkan masukkan nilai-nilai berikut:')
