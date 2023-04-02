@@ -1,7 +1,6 @@
 import streamlit as st
 
 st.title('Kalkulator Pinjol')
-st.set_theme('light')
 st.markdown("Ini adalah aplikasi sederhana untuk menghitung jumlah pinjaman yang dapat Anda ambil.")
 
 def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
