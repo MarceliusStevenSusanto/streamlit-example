@@ -1,3 +1,5 @@
+import streamlit as st
+
 def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     """
     Fungsi ini bertujuan untuk menghitung total uang yang dapat dipinjam,
@@ -54,3 +56,14 @@ def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     # hitung total uang yang dapat dipinjam
     pinjaman = gaji_bulanan * durasi_pinjaman * tingkat_bunga
     return pinjaman
+
+# Tambahkan judul pada halaman web
+st.title('Kalkulator Pinjaman')
+
+# Tambahkan input untuk gaji bulanan
+gaji_bulanan = st.text_input('Gaji Bulanan (dalam Rupiah)')
+
+# Tambahkan input untuk jumlah tanggungan
+jumlah_tanggungan = st.text_input('Jumlah Tanggungan (orang)')
+
+
