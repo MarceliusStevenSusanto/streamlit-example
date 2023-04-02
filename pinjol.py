@@ -57,13 +57,16 @@ def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     pinjaman = gaji_bulanan * durasi_pinjaman * tingkat_bunga
     return pinjaman
 
-# Tambahkan judul pada halaman web
 st.title('Kalkulator Pinjaman')
 
-# Tambahkan input untuk gaji bulanan
-gaji_bulanan = st.text_input('Gaji Bulanan (dalam Rupiah)')
+with st.form('input_form'):
+    st.write('Silahkan masukkan nilai-nilai berikut:')
+    gaji_bulanan = st.number_input('Gaji Bulanan', min_value=0)
+    jumlah_tanggungan = st.number_input('Jumlah Tanggungan', min_value=0)
+    durasi_pinjaman = st.slider('Durasi Pinjaman (bulan)', min_value=6, max_value=24, value=12)
+    submitted = st.form_submit_button('Hitung')
 
-# Tambahkan input untuk jumlah tanggungan
-jumlah_tanggungan = st.text_input('Jumlah Tanggungan (orang)')
-
-
+if submitted:
+    pinjaman = total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman)
+    st.write(f'Total uang yang dapat dipinjam: {pinjaman}')
+    
