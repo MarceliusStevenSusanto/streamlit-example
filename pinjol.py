@@ -1,19 +1,5 @@
 import streamlit as st
 
-# Set page configuration
-st.set_page_config(page_title="Aplikasi Kalkulator Pinjol", page_icon=":money_with_wings:", layout="wide")
-
-# Set theme configuration
-COLOR_THEME = "#99ccff"
-st.markdown(f"""
-<style>
-    .reportview-container {{
-        background-color: {COLOR_THEME};
-    }}
-</style>
-""", unsafe_allow_html=True)
-
-
 def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     """
     Fungsi ini bertujuan untuk menghitung total uang yang dapat dipinjam,
