@@ -58,6 +58,8 @@ def total_pinjaman(gaji_bulanan, jumlah_tanggungan, durasi_pinjaman):
     return pinjaman
 
 st.title('Kalkulator Pinjol')
+st.set_page_config(page_title="Kalkulator Pinjol", page_icon=":money_with_wings:", layout="wide", theme="neon")
+st.markdown("Ini adalah aplikasi sederhana untuk menghitung jumlah pinjaman yang dapat Anda ambil.")
 
 with st.form('input_form'):
     st.write('Silahkan masukkan nilai-nilai berikut:')
